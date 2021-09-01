@@ -19,7 +19,7 @@ const run = async () => {
         .split(',')
         .map((assigneeName) => assigneeName.trim());
 
-    let bakra = [assignees(Math.floor(Math.random()*assignees.length))];
+    let bakra = [assignees[Math.floor(Math.random()*assignees.length)]];
     // Assign issue
     console.log(
         `Assigning issue ${issue.number} to users ${JSON.stringify(assignees)}`
