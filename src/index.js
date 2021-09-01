@@ -19,10 +19,10 @@ const run = async () => {
         .split(',')
         .map((assigneeName) => assigneeName.trim());
 
-    let bakra = [assignees[Math.floor(Math.random()*assignees.length)]];
+    const bakra = [assignees[Math.floor(Math.random()*assignees.length)]];
     // Assign issue
     console.log(
-        `Assigning issue ${issue.number} to users ${JSON.stringify(assignees)}`
+        `Assigning issue ${issue.number} to users ${JSON.stringify(assignees)} and Picked a random user ${JSON.stringify(bakra)}`
     );
     try {
         await octokit.rest.issues.addAssignees({
