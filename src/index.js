@@ -19,6 +19,7 @@ const run = async () => {
         .split(',')
         .map((assigneeName) => assigneeName.trim());
 
+    let bakra = [assignees(Math.floor(Math.random()*assignees.length))];
     // Assign issue
     console.log(
         `Assigning issue ${issue.number} to users ${JSON.stringify(assignees)}`
@@ -28,7 +29,7 @@ const run = async () => {
             owner,
             repo,
             issue_number: issue.number,
-            assignees
+            bakra
         });
     } catch (error) {
         core.setFailed(error.message);
